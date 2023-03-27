@@ -1,9 +1,9 @@
 const Card = ({ id, title, para }) => {
   return (
     <>
-      <div className="bg-white p-4" style={{ borderRadius: "2px" }}>
+      <div className="bg-white p-4" style={{ borderRadius: "3px" }}>
         <div
-          className="bg-light justify-content-center d-flex align-items-center h4 "
+          className="bg-light justify-content-center d-flex align-items-center h2 fw-bold "
           style={{
             borderRadius: "50%",
             height: "50px",
@@ -13,7 +13,9 @@ const Card = ({ id, title, para }) => {
         >
           {id}
         </div>
-        <h4 style={{ color: "#424242" }}>{title}</h4>
+        <h2 className="fw-bold" style={{ color: "#424242" }}>
+          {title}
+        </h2>
         <p style={{ color: "#424242" }}>{para}</p>
       </div>
     </>
