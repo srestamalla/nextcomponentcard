@@ -4,6 +4,7 @@ import Card from ".//Card";
 import Title from ".//Title";
 
 const Section = () => {
+  //data for cards
   const cardData = [
     {
       id: 1,
@@ -31,6 +32,8 @@ const Section = () => {
       para: "Ensure your website's smooth operation and longevity woth our website design and hosting service including regular maintainance down the line. This includes regular updates and backups whit website testing and quality assurance ofr website security.",
     },
   ];
+
+  //data for title
   const titleData = [
     {
       id: 1,

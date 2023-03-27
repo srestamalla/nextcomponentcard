@@ -3,7 +3,7 @@ const Card = ({ id, title, para }) => {
     <>
       <div className="bg-white p-4" style={{ borderRadius: "3px" }}>
         <div
-          className="bg-light justify-content-center d-flex align-items-center h2 fw-bold "
+          className="bg-body justify-content-center d-flex align-items-center h2 fw-bold shadow p-3 mb-5  "
           style={{
             borderRadius: "50%",
             height: "50px",
