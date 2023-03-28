@@ -1,4 +1,6 @@
-const Card = ({ id, title, para }) => {
+import Image from "next/image";
+
+const Card = ({ id, title, para, image }) => {
   return (
     <>
       <div className="bg-white p-4" style={{ borderRadius: "3px" }}>
@@ -12,6 +14,9 @@ const Card = ({ id, title, para }) => {
           }}
         >
           {id}
+        </div>
+        <div>
+          <img alt="pic" src={image} style={{ width: 100, height: 100 }} />
         </div>
         <h2 className="fw-bold" style={{ color: "#424242" }}>
           {title}

@@ -5,7 +5,7 @@ const Title = ({ title, secondaryTitle, paragraph }) => {
     <>
       <div>
         <h1 className="fw-bold">{title}</h1>
-        <h1 className="fw-bold">{secondaryTitle}</h1>
+        <h1 className="fw-bold stroke">{secondaryTitle}</h1>
         <p className="text-muted">{paragraph}</p>
       </div>
     </>
