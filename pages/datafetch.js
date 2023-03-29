@@ -1,5 +1,5 @@
 import React from "react";
-import DataFetchSection from "/components/DataFetchSection";
+import DataFetchSection from "/components/dynamiccomponent/DataFetchSection";
 
 const DataFetch = ({ res }) => {
   console.log(res);

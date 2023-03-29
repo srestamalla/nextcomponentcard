@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Card from ".//Card";
-import Title from ".//Title";
+import Card from "./StaticCard";
+import Title from "./StaticTitle";
 
 const Section = () => {
   //data for cards
