@@ -9,7 +9,7 @@ const UserSection = ({ userData }) => {
     <>
       <Container className="bg-light">
         <Row>
-          {userData?.slice(0, 6).map((item, index) => (
+          {userData?.slice(0, 10).map((item, index) => (
             <Col className="mt-3 mb-3 h-100" md={12} lg={6} key={index}>
               <Card
                 id={item?.id}

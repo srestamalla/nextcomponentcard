@@ -4,9 +4,12 @@ import Link from "next/link";
 const UserCard = ({ id, title, para, image }) => {
   return (
     <>
-      <div className="bg-white p-4" style={{ borderRadius: "3px" }}>
+      <div
+        className="bg-white p-4 d-flex justify-content-around align-items-center "
+        style={{ borderRadius: "3px" }}
+      >
         <div
-          className="bg-body justify-content-center d-flex align-items-center h2 fw-bold shadow p-3 mb-5  "
+          className="bg-body justify-content-center d-flex align-items-center h2 fw-bold shadow p-3"
           style={{
             borderRadius: "50%",
             height: "50px",
@@ -17,7 +20,7 @@ const UserCard = ({ id, title, para, image }) => {
           {id}
         </div>
         <div>
-          <img alt="pic" src={image} style={{ width: 100, height: 100 }} />
+          <img alt="pic" src={image} style={{ width: 50, height: 50 }} />
         </div>
         <Link href={`/users/${id}`}>
           <h2 className="fw-bold" style={{ color: "#424242" }}>
