@@ -6,9 +6,9 @@ const UserSection = ({ userData }) => {
   console.log(userData);
 
   return (
-    <>
-      <Container className="bg-light">
-        <Row>
+    <div>
+      <Container>
+        <Row className="bg-light">
           {userData?.slice(0, 10).map((item, index) => (
             <Col className="mt-3 mb-3 h-100" md={12} lg={6} key={index}>
               <Card
@@ -21,7 +21,7 @@ const UserSection = ({ userData }) => {
           ))}
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
 
