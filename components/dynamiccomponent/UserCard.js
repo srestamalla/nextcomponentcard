@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const Card = ({ id, title, para, image }) => {
+const UserCard = ({ id, title, para, image }) => {
   return (
     <>
       <div className="bg-white p-4" style={{ borderRadius: "3px" }}>
@@ -18,12 +19,14 @@ const Card = ({ id, title, para, image }) => {
         <div>
           <img alt="pic" src={image} style={{ width: 100, height: 100 }} />
         </div>
-        <h2 className="fw-bold" style={{ color: "#424242" }}>
-          {title}
-        </h2>
+        <Link href={`/users/${id}`}>
+          <h2 className="fw-bold" style={{ color: "#424242" }}>
+            {title}
+          </h2>
+        </Link>
         <p style={{ color: "#424242" }}>{para}</p>
       </div>
     </>
   );
 };
-export default Card;
+export default UserCard;

@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Card from "./DynamicCard";
+import Card from "./UserCard";
 
-const DataFetchSection = ({ userData }) => {
+const UserSection = ({ userData }) => {
   console.log(userData);
 
   return (
@@ -25,4 +25,4 @@ const DataFetchSection = ({ userData }) => {
   );
 };
 
-export default DataFetchSection;
+export default UserSection;
