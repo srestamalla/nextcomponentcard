@@ -1,9 +1,9 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Card from ".//Card";
-import Title from ".//Title";
+import Card from "./Card";
+import Title from "./Title";
 
-const Section = ({ userData }) => {
+const DataFetchSection = ({ userData }) => {
   console.log(userData);
   //data for title
   const titleData = [
@@ -46,4 +46,4 @@ const Section = ({ userData }) => {
   );
 };
 
-export default Section;
+export default DataFetchSection;

@@ -1,11 +1,11 @@
 import React from "react";
-import Section from "/components/Section";
+import DataFetchSection from "/components/DataFetchSection";
 
 const DataFetch = ({ res }) => {
   console.log(res);
   return (
     <>
-      <Section userData={res} />
+      <DataFetchSection userData={res} />
     </>
   );
 };
