@@ -5,36 +5,6 @@ import Title from ".//Title";
 
 const Section = ({ userData }) => {
   console.log(userData);
-
-  //data for cards
-  // const cardData = [
-  //   {
-  //     id: 1,
-  //     title: "Custom website design and development",
-  //     para: "Experience the epitomod our website creation services with a state-of-the-art tech stack expertly crafted to elevate your online presence and leave a lasting impact on your audience",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Content management system (CMS) integration",
-  //     para: "Streamline your website accessibility with user -friendly CMS, incorporating intutive tools and features for editing, publishing and ogranizing website content",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Website content creation and Search engine optimization (SEO)",
-  //     para: "Harnessing the power of compelling content and website optimization strategieg to drive a deluge of organic traffic",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Website analytics and tracking",
-  //     para: "Gain valueable insights and adopt data-driven decisions to enhance your website's performance with our web analytics and tracking service",
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "Website hosting and maintenance",
-  //     para: "Ensure your website's smooth operation and longevity woth our website design and hosting service including regular maintainance down the line. This includes regular updates and backups whit website testing and quality assurance ofr website security.",
-  //   },
-  // ];
-
   //data for title
   const titleData = [
     {

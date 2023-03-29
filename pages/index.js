@@ -1,24 +1,12 @@
-import Section from "/components/Section";
+import StaticSection from "/components/StaticSection";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "styles/Home.module.css";
 
-export default function Home({ res }) {
-  console.log(res);
+export default function Home() {
   return (
     <>
-    <Section userData = {res} />
+      <StaticSection />
     </>
   );
 }
-
-export const getStaticProps = async () => {
-  const { API_KEY } = process.env;
-  const users = await fetch(API_KEY);
-  const res = await users.json();
-  return {
-    props: {
-      res,
-    },
-  };
-};
