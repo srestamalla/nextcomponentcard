@@ -4,7 +4,7 @@ const UserDetails = () => {
   return (
     <>
       <div>
-        <h1>Details Page of Gituser</h1>
+        <h1>Details Page of Gituser{userid}</h1>
       </div>
     </>
   );
