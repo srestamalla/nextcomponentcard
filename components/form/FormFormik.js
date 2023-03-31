@@ -9,17 +9,18 @@ const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
   email: Yup.string().email().required("Email is required"),
   phone: Yup.string()
+    .required("A phone number is required")
     .typeError("That doesn't look like a phone number")
     .matches(/^[0-9]+$/, "Must be only digits")
     .min(8, "Must be greater than 8 digits")
-    .max(10, "Must be lesser than 10 digits")
-    .required("A phone number is required"),
+    .max(10, "Must be lesser than 10 digits"),
 });
 
 const FormFormik = () => {
-  const handleSubmit = (values, { setSubmitting }) => {
+  const onSubmit = (values, { resetForm }) => {
     console.log(values);
-    setSubmitting(false);
+    e.preventDefault();
+    resetForm();
   };
 
   return (
@@ -27,7 +28,7 @@ const FormFormik = () => {
       <Container>
         <div>
           <Row className="mt-5 p-5 bg-light">
-            <Col>
+            <Col md={6} sm={12}>
               <div>
                 <h1 className="text-primary">Lets get this started</h1>
                 <p>
@@ -39,12 +40,12 @@ const FormFormik = () => {
                 <Formik
                   initialValues={{ name: "", email: "" }}
                   validationSchema={validationSchema}
-                  onSubmit={handleSubmit}
+                  onSubmit={onSubmit}
                 >
-                  {({ isSubmitting }) => (
-                    <Form>
+                  {({ handleSubmit }) => (
+                    <Form onSubmit={handleSubmit}>
                       <Row>
-                        <Col>
+                        <Col md={6} sm={12}>
                           <Form.Group className="mt-3">
                             <label className="form-label">Name</label>
                             <FastField
@@ -85,7 +86,7 @@ const FormFormik = () => {
                         <Button
                           className="mt-4 btn-primary"
                           type="submit"
-                          disabled={isSubmitting}
+                          //   disabled={isSubmitting}
                         >
                           Submit
                         </Button>
@@ -96,7 +97,10 @@ const FormFormik = () => {
               </div>
             </Col>
             <Col>
-              <div className="position-relative" style={{ height: "500px" }}>
+              <div
+                className="position-relative mt-4"
+                style={{ height: "500px" }}
+              >
                 <Image
                   alt="form image"
                   src={formImg}
