@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-const initialState = [
-  {
-    fName: "",
-    mName: "",
-    lName: "",
-    bDate: "",
-  },
-];
+const initialState = {
+  fName: "",
+  mName: "",
+  lName: "",
+  bDate: "",
+  address1: "",
+  address2: "",
+  cityAddress: "",
+  streetAddress: "",
+  postalCode: "",
+  email: "",
+  mnum: "",
+  pnum: "",
+  wnum: "",
+  company: "",
+  comment: "",
+};
 
 const FormComp = () => {
   const [values, setValues] = useState(initialState);
@@ -19,8 +28,10 @@ const FormComp = () => {
   };
 
   const handleSubmit = (e) => {
+    const resetField = document.getElementById("form");
     console.log(values);
     e.preventDefault();
+    resetField.reset();
   };
 
   return (
@@ -31,7 +42,7 @@ const FormComp = () => {
             <h2>Student Registration Form</h2>
           </Row>
           <Row className="bg-light">
-            <form onSubmit={handleSubmit} action="" method="">
+            <form id="form" onSubmit={handleSubmit} action="" method="">
               <label className="form-label">Students Name</label>
               <Row className="">
                 <Col className="">
@@ -60,10 +71,11 @@ const FormComp = () => {
                 </Col>
                 <Col>
                   <input
+                    onChange={handleChange}
                     className="form-control"
                     type="text"
                     id=""
-                    name=""
+                    name="lName"
                   ></input>
                   <div id="" class="form-text">
                     Last Name
